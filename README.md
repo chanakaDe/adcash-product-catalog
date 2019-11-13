@@ -26,7 +26,19 @@ git clone https://github.com/chanakaDe/adcash-product-catalog
 cd adcash-product-catalog
 ```
 
-Since this is a maven applicatoion, there are many ways to install all the dependencies. It should be quite straightforward to run your application from an IDE with some maven support (Eclipse, IntellIJ , NetBeans).
+Now you need to create a database in your MySQL instance named `Assignment2`.
+
+### Configuration
+
+To change the database connection, please visit `/src/main/resources/application.properties` file and enter your credentials.
+
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/Assignment2?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=chanaka
+```
+
+Since this is a maven application, there are many ways to install all the dependencies. It should be quite straightforward to run your application from an IDE with some maven support (Eclipse, IntellIJ , NetBeans).
 
 #### Method 1
 To deploy the project manually, please run the following command at the root folder structure of the project.
@@ -50,19 +62,9 @@ Navigate into the `JAR` file directory using terminal. Run following command to 
 java -jar jarfilename.jar
 ```
 
-### Confuguration
-
-To change the database connection, please visit `/src/main/resources/application.properties` file and enter your credentials. 
-
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/Assignment2?useSSL=false
-spring.datasource.username=root
-spring.datasource.password=chanaka
-```
-
 ### Optional - How to deploy application into Heroku
 
-Since this is a Spring Boot application, it has it's own embeded server. so it's really easy to deploy into Heroku. Following instructions show how to deploy current application into Heroku uisng a free account.
+Since this is a Spring Boot application, it has it's own embedded server. so it's really easy to deploy into Heroku. Following instructions show how to deploy current application into Heroku using a free account.
 
 ```
 cd adcash-product-catalog
